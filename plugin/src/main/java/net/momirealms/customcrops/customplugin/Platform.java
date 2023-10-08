@@ -19,5 +19,6 @@ package net.momirealms.customcrops.customplugin;
 
 public enum Platform {
     ItemsAdder,
-    Oraxen
+    Oraxen,
+    Geary
 }

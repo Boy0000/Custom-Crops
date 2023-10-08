@@ -40,6 +40,7 @@ import net.momirealms.customcrops.command.CustomCropsCommand;
 import net.momirealms.customcrops.customplugin.Platform;
 import net.momirealms.customcrops.customplugin.PlatformInterface;
 import net.momirealms.customcrops.customplugin.PlatformManager;
+import net.momirealms.customcrops.customplugin.geary.GearyPluginImpl;
 import net.momirealms.customcrops.customplugin.itemsadder.ItemsAdderPluginImpl;
 import net.momirealms.customcrops.customplugin.oraxen.OraxenPluginImpl;
 import net.momirealms.customcrops.helper.LibraryLoader;
@@ -202,6 +203,10 @@ public final class CustomCrops extends CustomCropsPlugin {
         else if (pluginManager.getPlugin("Oraxen") != null) {
             this.platform = Platform.Oraxen;
             this.platformInterface = new OraxenPluginImpl();
+        }
+        else if (pluginManager.getPlugin("Geary") != null) {
+            this.platform = Platform.Geary;
+            this.platformInterface = new GearyPluginImpl();
         }
         if (this.platform == null) {
             AdventureUtils.consoleMessage("<red>========================[CustomCrops]=========================");

@@ -42,6 +42,7 @@ import net.momirealms.customcrops.api.object.sprinkler.Sprinkler;
 import net.momirealms.customcrops.api.object.sprinkler.SprinklerConfig;
 import net.momirealms.customcrops.api.object.wateringcan.WateringCanConfig;
 import net.momirealms.customcrops.api.object.world.SimpleLocation;
+import net.momirealms.customcrops.customplugin.geary.GearyHandler;
 import net.momirealms.customcrops.customplugin.itemsadder.ItemsAdderHandler;
 import net.momirealms.customcrops.customplugin.oraxen.OraxenHandler;
 import net.momirealms.customcrops.util.AdventureUtils;
@@ -76,6 +77,7 @@ public class PlatformManager extends Function {
         this.handler = switch (plugin.getPlatform()) {
             case ItemsAdder -> new ItemsAdderHandler(this);
             case Oraxen -> new OraxenHandler(this);
+            case Geary -> new GearyHandler(this);
         };
     }
 
